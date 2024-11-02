@@ -47,11 +47,11 @@ class Server:
         Retrieve a specific page of data from the dataset.
 
         Args:
-            page (int): Page number (1-indexed)
-            page_size (int): Number of items per page
+            page: Page number (1-indexed)
+            page_size: Number of items per page
 
-        Returns:
-            List[List]: List of rows for the requested page
+        Return:
+            List: List of rows for the requested page
         """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
