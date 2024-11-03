@@ -32,7 +32,7 @@ class LRUCache(BaseCaching):
         if key is not None and item is not None:
             if key in self.cache_data:
                 self.cache_data.pop(key)
-            elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+            elif len(self.cache_data) >= self.MAX_ITEMS:
                 lru_key, _ = self.cache_data.popitem(last=False)
                 print(f"DISCARD: {lru_key}")
 
